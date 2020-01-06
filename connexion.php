@@ -1,15 +1,4 @@
-<?php session_start();
-var_dump($_SESSION);
- try {
-  $pda = new PDO("mysql:host=localhost;dbname=amigraf_forum_dc;charset=utf8","root","naruto59");
-
-} catch (\Exception $e) {
-  echo "<pre>";
-  var_dump($e);
-  echo "</pre>";
-  exit;
-} ?>
-
+<?php require 'bdd.php'; ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -17,7 +6,9 @@ var_dump($_SESSION);
     <title></title>
   </head>
   <body>
-<?php if(isset($_POST["email"]) && !empty($_POST["mdp"])) {
+<?php /*condition pour savoir si le mail et le mdp n'est pas vide, puis on exécute pour la requête et
+on fait une condition pour savoir si le mdp est dans la bdd, sinon on envoie un message d'erreur */
+if(isset($_POST["email"]) && !empty($_POST["mdp"])) {
   $query = $pda->prepare("SELECT `pseudo`, `email`, `password` FROM `users` WHERE `email` = :email");
 $query->bindValue("email", $_POST['email']);
 try {
