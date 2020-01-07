@@ -51,6 +51,8 @@
     <input type="radio" name="gender" value="Femme" id="gender">
     <label for="homme">Homme :</label>
     <input type="radio" name="gender" value="Homme" id="gender">
+    <label for="Other">Autre :</label>
+    <input type="radio" name="gender" value="Other" id="gender" checked="checked">
   </div>
   <div class="block age">
     <label for="age">Age :</label>
