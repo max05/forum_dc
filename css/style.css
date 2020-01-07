@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b2042;
+  width: 100%;
+  margin: auto;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+nav ul {
+  background-color: #6371ec;
+  display: flex;
+}
+
+nav ul li {
+  text-decoration: none;
+}
+
+nav a {
+  font-size: 15px;
+  padding: 15px;
+  color: white;
+}
+
+img {
+  width: 30%;
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(170, 170, 171);
+  padding: 20px;
+  display: block;
+}
+
+a:hover {
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+#formulaire {
+  width: 700px;
+  padding: 80px 20px 80px 20px;
+  border-radius: 20px;
+  margin: auto;
+  background-image: linear-gradient(to bottom, #3d4e81, #5753c9, #6e7ff3);
+  opacity: 0.9;
+}
+
+.deuxblocs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.deuxblocs input {
+  width: 47%;
+}
+
+label {
+  color: white;
+  width: 100px;
+}
+
+input {
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  width: 90%;
+  background-color: #6371ec;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  opacity: 0.7;
+}
+
+input::placeholder {
+  color: white;
+  font-size: 1.3em;
+}
+
+.genre {
+  display: flex;
+  justify-content: center;
+}
+
+.genre input {
+  margin: 10px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.homme .femme {
+  padding: 20px;
+}
+
+@-webkit-keyframes click-wave {
+  0% {
+    height: 30px;
+    width: 30px;
+    opacity: 0.35;
+    position: relative;
+  }
+
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes click-wave {
+  0% {
+    height: 30px;
+    width: 30px;
+    opacity: 0.35;
+    position: relative;
+  }
+
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+@keyframes click-wave {
+  0% {
+    height: 30px;
+    width: 30px;
+    opacity: 0.35;
+    position: relative;
+  }
+
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.genre .option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  top: 13.3333333333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+
+.genre .option-input:hover {
+  background: #9faab7;
+}
+
+.genre .option-input:checked {
+  background: #6e7ff3;
+}
+
+.genre .option-input:checked::before {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  content: '\2716';
+  display: inline-block;
+  font-size: 26.6666666667px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.genre .option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #6e7ff3;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.genre .option-input.radio {
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.genre .option-input.radio::after {
+  border-radius: 10px;
+}
+
+#envoyer {
+  padding: 15px 0 15px 0;
+  color: black;
+  font-size: 18px;
+  transition: linear all 0.4s;
+  width: 150px;
+  background-color: white;
+  opacity: 1;
+  margin: 30px auto 0 auto;
+}
+
+@media screen and (max-width: 880px) {
+  .deuxblocs input {
+    width: 100%;
+  }
+
+  main {
+    padding: 20px;
+    width: 95%;
+    margin: auto;
+  }
+}
