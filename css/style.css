@@ -17,6 +17,11 @@ body {
   background-position: center center;
 }
 
+header {
+  width: 100%;
+  position: absolute;
+}
+
 nav ul {
   background-color: #6371ec;
   display: flex;

@@ -2,22 +2,22 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <title>Inscription</title>
+    <link rel="stylesheet" href="css/style.css">
+  <title>Inscription - Forum DC</title>
 </head>
 <body>
 
-  <!-- <header>
+  <header>
     <nav>
       <ul>
-        <li> <a href="#">Accueil</a> </li>
+        <li> <a href="index.php">Accueil</a> </li>
         <li> <a href="#">Forum</a> </li>
         <li> <a href="#">Inscription</a> </li>
         <li> <a href="#">Connexion</a> </li>
       </ul>
     </nav>
-  </header> -->
+  </header>
 
 <main>
 
