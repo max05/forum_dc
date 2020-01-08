@@ -9,7 +9,7 @@
 <?php /*condition pour savoir si le mail et le mdp n'est pas vide, puis on exécute pour la requête et
 on fait une condition pour savoir si le mdp est dans la bdd, sinon on envoie un message d'erreur */
 if(isset($_POST["email"]) && !empty($_POST["password"])) {
-  $query = $pda->prepare("SELECT `pseudo`, `email`, `password` FROM `users` WHERE `email` = :email");
+  $query = $pda->prepare("SELECT `id`, `pseudo`, `email`, `password` FROM `users` WHERE `email` = :email");
 $query->bindValue("email", $_POST['email']);
 try {
   $query->execute();
@@ -18,14 +18,19 @@ try {
   if ($user['password'] == $_POST['password']) {
       echo "Bienvenue : " . $user['pseudo'];
       $_SESSION['user'] = $user;
-      var_dump($_SESSION['user']);
-      //exit;
+      var_dump($_SESSION);
+      exit;
 
   } else if($user['password'] != $_POST['password']) {
     echo "ERREUR MOT DE PASS";
   }
 } catch (\Exception $ex) {
   echo "CONNEXION ECHOUE";
-} }?>
+} 
+} else {
+  echo "veuillez saisir votre login et/ou mot de passe";
+}
+
+?>
   </body>
 </html>
