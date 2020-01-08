@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php
+include 'nav.php';
+?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -10,7 +12,7 @@
   </head>
   <body>
 
-   <?php include 'nav.php'; ?>
+
 
 
     <section id="formulaire-connexion">
@@ -22,9 +24,11 @@
                  <label for="password"> <!--Password--> </label>  <br> <input type="password" placeholder="Mot de passe" name="password" id="password" autocomplete="off"/>
                  <br>
                  <input id="envoyer" type="submit" value="Se connecter"/>
+                 <a href="inscription.php">Pas encore inscrit ? Clique ici</a>
 
       </section>
 
-           <?php include 'footer.php'; ?>
+  <?php include 'footer.php'; ?>
+
   </body>
 </html>
