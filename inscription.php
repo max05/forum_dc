@@ -9,32 +9,17 @@
 </head>
 <body>
 
-  <header>
-
-          <h1>DC COMICS <span>ESPACE FORUM</span> </h1>
-
-      <a class="connexion" href="#">Connexion</a>
-
-
-    <nav>
-      <ul>
-        <li> <a href="index.php">Accueil</a> </li>
-        <li> <a href="#">Forum</a> </li>
-        <li> <a href="inscription.php">Inscription</a> </li>
-        <li> <a href="#">Connexion</a> </li>
-      </ul>
-    </nav>
-
-  </header>
+ <?php include 'nav.php'; ?>
 
 
 <main>
 
+<section id="bloc-formulaire">
 
 <section id="formulaire">
     <div class="img-inscription">
       <form class="inscription" action="requete_inscription.php" method="post" autocomplete="off">
-<img src="images/logo.png" alt="logo-dc">
+<img class="img-inscription" src="images/logo.png" alt="logo-dc">
 <h1>Inscription</h1>
 
 
@@ -79,7 +64,7 @@
 
 </form>
 </div>
-
+</section>
 </section>
 </main>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
