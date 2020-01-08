@@ -1,6 +1,5 @@
-<?php 
-session_start();
-require 'bdd.php' 
+<?php
+require 'bdd.php'
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -9,7 +8,7 @@ require 'bdd.php'
     <title>nav</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
@@ -19,11 +18,11 @@ require 'bdd.php'
             <p>DC COMICS <span>ESPACE FORUM</span> </p>
 
 
-      <?php 
+      <?php
         if($_SESSION == true){ ?>
         <nav>
         <ul>
-          <li> <a href="index.php">Accueil</a> </li>
+          <li> <a href="accueil.php">Accueil</a> </li>
           <li> <a href="#">Forum</a> </li>
           <li> <a href="deconnexion.php">Deconnexion</a> </li>
           <?="<p>".$_SESSION[0]['pseudo']."</p>"; ?>
@@ -32,7 +31,7 @@ require 'bdd.php'
         <?php } else { ?>
                 <nav>
                 <ul>
-                  <li> <a href="index.php">Accueil</a> </li>
+                  <li> <a href="accueil.php">Accueil</a> </li>
                   <li> <a href="#">Forum</a> </li>
                   <li> <a href="page-connexion.php">Connexion</a> </li>
                 </ul>
