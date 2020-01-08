@@ -18,11 +18,12 @@ on fait une condition pour savoir si le mdp est dans la bdd, sinon on envoie un 
     try {
       $query->execute();
       $user = $query->fetch();
-      //var_dump($user);
+      var_dump($user);
       if ($user['password'] == $_POST['password']) {
         echo "Bienvenue : " . $user['pseudo'];
         $_SESSION['user'] = $user;
         var_dump($_SESSION);
+        exit;
       } else if ($user['password'] != $_POST['password']) {
         echo "ERREUR MOT DE PASS";
       }
