@@ -2,6 +2,7 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
   <title>Inscription - Forum DC</title>
@@ -9,15 +10,23 @@
 <body>
 
   <header>
+
+          <h1>DC COMICS <span>ESPACE FORUM</span> </h1>
+
+      <a class="connexion" href="#">Connexion</a>
+
+
     <nav>
       <ul>
         <li> <a href="index.php">Accueil</a> </li>
         <li> <a href="#">Forum</a> </li>
-        <li> <a href="#">Inscription</a> </li>
+        <li> <a href="inscription.php">Inscription</a> </li>
         <li> <a href="#">Connexion</a> </li>
       </ul>
     </nav>
+
   </header>
+
 
 <main>
 
@@ -27,6 +36,8 @@
       <form class="inscription" action="requete_inscription.php" method="post" autocomplete="off">
 <img src="images/logo.png" alt="logo-dc">
 <h1>Inscription</h1>
+
+
 
 <div class="deuxblocs">
 
@@ -68,7 +79,6 @@
 
 </form>
 </div>
-
 
 </section>
 </main>
