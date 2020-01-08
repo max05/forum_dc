@@ -10,18 +10,29 @@
   </head>
   <body>
     <header>
+
+            <h1>DC COMICS <span>ESPACE FORUM</span> </h1>
+
+        <a class="connexion" href="#">Connexion</a>
+
+
       <nav>
         <ul>
           <li> <a href="index.php">Accueil</a> </li>
           <li> <a href="#">Forum</a> </li>
-          <li> <a href="#">Inscription</a> </li>
+          <li> <a href="inscription.php">Inscription</a> </li>
           <li> <a href="#">Connexion</a> </li>
         </ul>
       </nav>
+
     </header>
 
-
 <main>
+
+  <section id="accueil">
+
+  </section>
+
 <section id="formulaire">
 <h1>Connexion</h1>
   <form class="formulaire" method="post" action="connexion.php" autocomplete="off" autocomplete="false">
@@ -34,4 +45,15 @@
   </section>
   </main>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $("#menu").click(function() {
+        $(".menu_liens").toggle();
+      });
+    });
+  </script>
 </html>
