@@ -1,4 +1,6 @@
-<?php require 'bdd.php'; ?>
+<?php
+session_start();
+ require 'bdd.php'; ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 

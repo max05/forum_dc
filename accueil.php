@@ -1,3 +1,7 @@
+<?php
+session_start();
+include 'nav.php'; 
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -11,7 +15,7 @@
   </head>
   <body>
 
-   <?php include 'nav.php'; ?>
+  
 
 <main>
 
