@@ -1,7 +1,4 @@
-<?php require 'bdd.php';
-
-var_dump(isset($_POST["prenom"]) && !empty($_POST["pseudo"]) && isset($_POST["email"]) && !empty($_POST["email-confirm"]));
-    var_dump($_POST) ?>
+<?php require 'bdd.php'; ?>
     <a href="index.php">Accueil</a>
     <?php if(isset($_POST["prenom"]) && !empty($_POST["pseudo"]) && isset($_POST["email"]) && !empty($_POST["email-confirm"]) && isset($_POST["mdp"]) && !empty($_POST["mdp-confirm"])) {
       $query = $pda->prepare("SELECT `email` FROM `users` WHERE `email` = :email");
@@ -24,6 +21,7 @@ var_dump(isset($_POST["prenom"]) && !empty($_POST["pseudo"]) && isset($_POST["em
           try {
               $query->execute();
               echo "Inscription valide";
+              header("Location: index.php");
           } catch (\Exception $e) {
             echo "Erreur dans l'inscription";
             var_dump($e);  

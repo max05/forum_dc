@@ -1,5 +1,6 @@
-<?php session_start();
-var_dump($_SESSION);
+<?php
+session_start();
+
  try {
   $pda = new PDO("mysql:host=localhost;dbname=amigraf_forum_dc;charset=utf8","root","naruto59");
 
