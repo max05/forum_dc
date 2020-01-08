@@ -11,10 +11,6 @@ body {
   margin: auto;
   font-family: "Gotham", arial, sans-serif;
   font-size: 16px;
-  background-image: url('../images/background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   color: white;
 }
 
@@ -26,12 +22,64 @@ header {
 }
 
 footer {
-  background-image: linear-gradient(to right, #5753c9, #6e7ff3);
+  background-image: linear-gradient(to left, #3d4e81, #5753c9, #6e7ff3);
   width: 100%;
+  padding: 40px;
 }
 
 footer p {
   text-align: left;
+  padding: 15px 10px;
+}
+
+.liens-annexes {
+  display: flex;
+}
+
+.liens-annexes a {
+  color: white;
+  font-size: 10px;
+  font-family: "Gotham-bold", helvetica, sans-serif;
+  padding: 0 10px;
+  margin-top: 30px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li a {
+  color: white;
+  font-family: "Gotham-bold", helvetica, sans-serif;
+}
+
+.reset,
+.envoyer {
+  font-size: 15px;
+}
+
+.reset {
+  background-color: #3d4e81;
+}
+
+.envoyer {
+  background-color: white;
+  color: black;
+}
+
+.reseaux-sociaux {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.reseaux-sociaux a {
+  font-size: 25px;
+  color: white;
+}
+
+.reseaux-sociaux a:hover {
+  color: #6e7ff3;
 }
 
 .connexion {
@@ -79,11 +127,16 @@ h2 {
   width: 60%;
 }
 
+h4 {
+  font-size: 26px;
+  padding: 10px;
+}
+
 a {
   text-decoration: none;
   font-size: 13px;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 10px 10px;
   display: block;
   transition: 250ms linear all;
 }
@@ -142,13 +195,26 @@ section {
   margin: auto;
 }
 
-#formulaire {
+#formulaire,
+.formulaire {
   width: 600px;
   padding: 20px;
   border-radius: 20px;
   margin: auto;
   background-image: linear-gradient(to bottom, #3d4e81, #5753c9, #6e7ff3);
   opacity: 0.9;
+}
+
+#formulaire-connexion {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .deuxblocs {
@@ -166,7 +232,8 @@ label {
   width: 100px;
 }
 
-input {
+input,
+textarea {
   margin: 10px 0 10px 0;
   padding: 10px;
   width: 90%;
@@ -175,11 +242,18 @@ input {
   border: 0;
   color: white;
   opacity: 0.7;
+  font-family: "Gotham", helvetica, sans-serif;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: white;
   font-size: 1.3em;
+}
+
+textarea {
+  width: 97%;
+  height: 150px;
 }
 
 .genre {
