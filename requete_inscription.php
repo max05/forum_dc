@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'bdd.php'; ?>
-    <a href="index.php">Accueil</a>
+    <a href="accueil.php">Accueil</a>
     <?php if(isset($_POST["prenom"]) && !empty($_POST["pseudo"]) && isset($_POST["email"]) && !empty($_POST["email-confirm"]) && isset($_POST["mdp"]) && !empty($_POST["mdp-confirm"])) {
       $query = $pda->prepare("SELECT `email` FROM `users` WHERE `email` = :email");
       $query->bindValue("email", $_POST['email']);
@@ -26,7 +26,7 @@ require 'bdd.php'; ?>
               header("Location: accueil.php");
           } catch (\Exception $e) {
             echo "Erreur dans l'inscription";
-            var_dump($e);  
+            var_dump($e);
           }
         } else{
           echo "email déjà utilisé";

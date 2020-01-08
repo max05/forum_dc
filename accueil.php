@@ -1,7 +1,7 @@
 <?php
-session_start();
-include 'nav.php'; 
+include 'nav.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -15,7 +15,7 @@ include 'nav.php';
   </head>
   <body>
 
-  
+
 
 <main>
 
@@ -24,29 +24,49 @@ include 'nav.php';
   </section>
 
   <section id="presentation">
-<img src="images/background.jpg" alt="super-heros-dc">
-    <h2>Le forum DC Comics vous permet d'échanger sur n'inporte quel sujet</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+         <img src="images/background.jpg" alt="super-heros-dc">
+         <h2>Le forum <span>DC Comics</span> vous permet d'échanger sur n'importe quel sujet</h2>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+
+    </div>
 
   </section>
 
   <section id="presentation-categories">
 
-    <div class="picto-categories">
-<a href="#"><img src="images/picto-livre.svg" alt="picto-livres"></a>
-<a href="#"><img src="images/picto-films.svg" alt="picto-films"></a>
-<a href="#"><img src="images/picto-musique.svg" alt="picto-musique"></a>
-<a href="#"><img src="images/picto-series.svg" alt="picto-series"></a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 picto-categories">
+      <a href="#"><img src="images/picto-livre.svg" alt="picto-livres"></a>
+      <a href="#"><img src="images/picto-films.svg" alt="picto-films"></a>
+      <a href="#"><img src="images/picto-musique.svg" alt="picto-musique"></a>
+      <a href="#"><img src="images/picto-series.svg" alt="picto-series"></a>
+      <div class="col-md-12 picto-categories">
+              <a href="#">Livres</a>
+              <a href="#">Films</a>
+              <a href="#">Musique</a>
+              <a href="#">Séries</a>
+      </div>
 
+      <h2> <span>Échangez</span> sur n'importe quel sujet à travers les catégories</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,luptate.</p>
+
+      <button href="categories.php" type="button" name="button">Accèder aux catégories</button>
+    </div>
+
+  </div>
+</div>
 
     </div>
 
-    <h2>Échangez sur n'importe quel sujet à travers les catégories</h2>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,luptate.</p>
-
-    <a href="categories.php">Accèder aux catégories</a>
   </section>
 
   <section id="partager">

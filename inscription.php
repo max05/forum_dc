@@ -1,3 +1,7 @@
+<?php
+include 'nav.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -8,8 +12,6 @@
   <title>Inscription - Forum DC</title>
 </head>
 <body>
-
- <?php include 'nav.php'; ?>
 
 
 <main>
@@ -67,6 +69,10 @@
 </section>
 </section>
 </main>
+
+ <?php include 'footer.php'; ?>
+
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({once: true,

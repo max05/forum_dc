@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require 'bdd.php'
 ?>
 <!DOCTYPE html>
@@ -14,30 +16,35 @@ require 'bdd.php'
   <body>
 
     <header>
+<div class="">
+  <a href="accueil.php">
+      <img src="images/logo.svg" alt="logo-dc-forum">
+  </a>
+</div>
 
-            <p>DC COMICS <span>ESPACE FORUM</span> </p>
+<div class="nav">
+  <?php
+    if($_SESSION == true){ ?>
+    <nav>
+    <ul>
+      <li> <a href="accueil.php">Accueil</a> </li>
+      <li> <a href="page-forum.php">Forum</a> </li>
+      <li> <a href="deconnexion.php">Deconnexion</a> </li>
+      <?="<p>".$_SESSION[0]['pseudo']."</p>"; ?>
+    </ul>
+  </nav>
+    <?php } else { ?>
+            <nav>
+            <ul>
+              <li> <a href="accueil.php">Accueil</a> </li>
+              <li> <a href="page-forum.php">Forum</a> </li>
+              <li> <a href="page-connexion.php">Connexion</a> </li>
+            </ul>
+          </nav>
+    <?php }
+  ?>
+</div>
 
-
-      <?php
-        if($_SESSION == true){ ?>
-        <nav>
-        <ul>
-          <li> <a href="accueil.php">Accueil</a> </li>
-          <li> <a href="#">Forum</a> </li>
-          <li> <a href="deconnexion.php">Deconnexion</a> </li>
-          <?="<p>".$_SESSION[0]['pseudo']."</p>"; ?>
-        </ul>
-      </nav>
-        <?php } else { ?>
-                <nav>
-                <ul>
-                  <li> <a href="accueil.php">Accueil</a> </li>
-                  <li> <a href="#">Forum</a> </li>
-                  <li> <a href="page-connexion.php">Connexion</a> </li>
-                </ul>
-              </nav>
-        <?php }
-      ?>
 
     </header>
 
