@@ -18,7 +18,11 @@ require 'bdd.php';
 
 
     <?php
+<<<<<<< HEAD
        $query = $pda->prepare("SELECT `id`, `title` ,`img`,`description` FROM `categories`");
+=======
+       $query = $pda->prepare("SELECT `id`, `title` , `description`, `img` FROM `categories`");
+>>>>>>> 1dd0bfcb41503fe9fe796fa1a11181ba5a9c760d
        $query->execute();
        while($result = $query->fetch()){
          echo '<a href="page-thread.php?id='.$result['id'].'">';
