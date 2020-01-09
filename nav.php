@@ -46,6 +46,7 @@ require 'bdd.php'
 <nav>
 <ul>
   <li> <a href="accueil.php">Accueil</a> </li>
+  <li> <a href="heros.php">Actualités</a>
   <li> <a href="heros.php">Univers</a>
   <ul>
     <li> <a href="#">Héros</a> </li>
