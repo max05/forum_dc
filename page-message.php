@@ -46,7 +46,7 @@ require 'bdd.php';
             <form method="post" action="requete-message.php">
                 <label for="message">Messages :</label>
                 <input type="textarea" size="30px" name="message" id="message"> 
-                <input type="hidden" value=<?php $idTop?> name="topic_id">
+                <input type="hidden" value="<?php $idTop ?>" name="topic_id">
             <button type="submit" class="btn btn-primary">Poster</button>
             </form>
            
