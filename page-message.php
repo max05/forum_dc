@@ -43,14 +43,12 @@ require 'bdd.php';
 
        if($_SESSION == true) {
            ?>
-            <form method="post" action="page-message.php">
+            <form method="post" action="requete-message.php">
                 <label for="message">Messages :</label>
                 <input type="textarea" size="30px" name="message" id="message"> 
+                <input type="hidden" value="<?php $idTop?>" name="topic_id">
             <button type="submit" class="btn btn-primary">Poster</button>
             </form>
-            <?php
-            $query = $pda->prepare("INSERT INTO `comments` (`messages`, `date`, `id_topics`, `id_users`) VALUES (:message, '2020-01-09 00:00:00', '1', '1')");
-            ?>
            
     <?php 
        } else { ?>
