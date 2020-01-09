@@ -20,7 +20,7 @@ include 'nav.php';
 <main>
 
   <section id="accueil">
-<h1>Bienvenue sur le forum des passionnés DC</h1>
+<!-- <h1>Bienvenue sur le forum des passionnés DC</h1> -->
   </section>
 
   <section id="presentation">
@@ -47,19 +47,13 @@ include 'nav.php';
       <a href="#"><img src="images/picto-films.svg" alt="picto-films"></a>
       <a href="#"><img src="images/picto-musique.svg" alt="picto-musique"></a>
       <a href="#"><img src="images/picto-series.svg" alt="picto-series"></a>
-      <div class="col-md-12 picto-categories">
-              <a href="#">Livres</a>
-              <a href="#">Films</a>
-              <a href="#">Musique</a>
-              <a href="#">Séries</a>
+            
+              <h2> <span>Échangez</span> sur n'importe quel sujet à travers les catégories</h2>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,luptate.</p>
+
+              <button href="categories.php" type="button" name="button">Accèder aux catégories</button>
       </div>
-
-      <h2> <span>Échangez</span> sur n'importe quel sujet à travers les catégories</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,luptate.</p>
-
-      <button href="categories.php" type="button" name="button">Accèder aux catégories</button>
-    </div>
 
   </div>
 </div>

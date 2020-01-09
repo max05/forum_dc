@@ -32,20 +32,20 @@
     <div class="col-md-8">
 
       <h4>N'hésites pas à nous contacter si tu souhaites participer à l'évolution du site!</h4>
-<form class="form-footer" action="x" method="post">
+<form id="formulaire-contact" class="form-footer" action="formulaire-contact.php" method="post">
   <div class="deuxblocs">
-    <input type="text" name="prenom" id="prenom" placeholder="Prénom *" autocomplete="off" >
+    <input for="prenon" type="text" name="prenom" id="prenom" placeholder="Prénom *" autocomplete="off" >
 
-    <input type="text" name="nom" id="nom" placeholder="Nom *" autocomplete="off">
+    <input for="nom"type="text" name="nom" id="nom" placeholder="Nom *" autocomplete="off">
   </div>
 <div class="deuxblocs">
-  <input type="email" name="email" id="email" placeholder="Email *" autocomplete="off">
-  <input type="text" name="sujet" id="sujet" placeholder="Votre Sujet *" autocomplete="off">
+  <input for="email" type="email" name="email" id="email" placeholder="Email *" autocomplete="off">
+  <input for="objet" type="text" name="objet" id="objet" placeholder="Votre Sujet *" autocomplete="off">
 </div>
 <div class="deuxblocs">
-  <textarea id="msg" name="user_message" placeholder="Votre message" ></textarea>
-  <input class="reset" TYPE="reset" NAME="reset" VALUE="Réinitialiser">
-  <input class="envoyer" TYPE="submit" NAME="envoyer" VALUE="Envoyer">
+  <textarea for="message" id="msg" name="message" placeholder="Votre message" ></textarea>
+  <input class="reset" type="reset" name="reset" VALUE="Réinitialiser">
+  <input class="envoyer" type="submit" name="envoyer" VALUE="Envoyer">
 
 </div>
 
