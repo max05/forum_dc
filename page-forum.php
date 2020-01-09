@@ -16,13 +16,17 @@ require 'bdd.php';
     <h1>page forum</h1>
   </section>
     <?php
-       $query = $pda->prepare("SELECT * FROM ``categories");
+       $query = $pda->prepare("SELECT `title` , `description` FROM `categories`");
+       $query->execute();
        while($result = $query->fetch()){
-         echo "<section>";
-         echo "<h2> ".$result['title']." </h2>";
-         echo "<h3> ".$result['description'] ."</h3>";
-         echo "</section>";
+         echo '<a href="">';
+         echo '<section>';
+         echo '<h2> '.$result['title'].' </h2>';
+         echo '<h3> '.$result['description'] .'</h3>';
+         echo '</section>';
+         echo '</a>';
        }
+       $query->closeCursor();
     ?>
 
 
