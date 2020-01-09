@@ -15,13 +15,13 @@ var_dump($_SESSION);
   <?php /*condition pour savoir si le mail et le mdp n'est pas vide, puis on exécute pour la requête et
 on fait une condition pour savoir si le mdp est dans la bdd, sinon on envoie un message d'erreur */
   if (isset($_POST["email"]) || !empty($_POST["password"])) {
-    $query = $pda->prepare("SELECT `id`, `pseudo`, `email`, `password` FROM `users` WHERE `email` = :email");
-    $query->bindValue("email", $_POST['email']);
+    $query = $pda->prepare("SELECT `id`, `pseudo`, `email`, `password` FROM `users` WHERE `email` = :mail");
+    $query->bindValue("mail", $_POST['mail']);
     try {
       $query->execute();
       $user = $query->fetch();
       var_dump($_POST);
-      var_dump($_POST['email']);
+      var_dump($_POST['mail']);
       var_dump($_POST['password']);
       var_dump($query->fetchAll());
       if ($user['password'] == $_POST['password']) {

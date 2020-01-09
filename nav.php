@@ -30,7 +30,7 @@ require 'bdd.php'
       <li> <a href="accueil.php">Accueil</a> </li>
       <li> <a href="page-forum.php">Forum</a> </li>
       <li> <a href="deconnexion.php">Deconnexion</a> </li>
-      <?="<p>".$_SESSION[0]['pseudo']."</p>"; ?>
+      <?="<p>".$_SESSION['user']['pseudo']."</p>"; ?>
     </ul>
   </nav>
     <?php } else { ?>

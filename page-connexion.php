@@ -19,7 +19,8 @@ include 'nav.php';
 
       <form class="formulaire" method="post" action="connexion.php" autocomplete="off" autocomplete="false">
             <h2>Connexion</h2>
-            <label for="pseudo"> <!--Identifiant--> </label> <br> <input type="text" placeholder="Identifiant" size="24" name="email" id="email" autocomplete="off"/>
+            <label for="pseudo"> <!--Identifiant--> </label> <br><input type="text" size="24" name="mail" id="mail" placeholder="Email">
+            
                <br/>
                  <label for="password"> <!--Password--> </label>  <br> <input type="password" placeholder="Mot de passe" name="password" id="password" autocomplete="off"/>
                  <br>
