@@ -38,6 +38,7 @@ require 'bdd.php';
          echo '</a>';
        }
        $query->closeCursor();
+
     ?>
 
 

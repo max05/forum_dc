@@ -40,7 +40,18 @@ require 'bdd.php';
 
        }
        $query->closeCursor();
+
+       if($_SESSION == true) {
+           ?>
+           <button type="button" class="btn btn-primary">Poster</button>
+    <?php 
+       } else { ?>
+       <a href="page-connexion.php"><button type="button" class="btn btn-primary">Connectez-vous</button></a>
+    <?php       
+       }
     ?>
+
+
 
 
 
