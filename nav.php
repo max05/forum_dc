@@ -21,7 +21,7 @@ require 'bdd.php'
   <div class="row">
     <div class="col-md-12">
       <a href="accueil.php">
-          <!-- <img src="images/logo.svg" alt="logo-dc-forum"> -->
+        <img src="images/logo.svg" alt="logo-dc-forum">
       </a>
 
       <div class="connexion-deco">

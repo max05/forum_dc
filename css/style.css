@@ -20,10 +20,9 @@ img {
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 40px;
   padding: 20px 0 5px 20px;
   color: white;
-  text-shadow: 0 0 20px black;
 }
 
 h2 {
@@ -48,7 +47,7 @@ a {
 
 p {
   padding: 20px;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -57,13 +56,17 @@ p {
 
 header {
   width: 100%;
-  background-image: linear-gradient(to right, #5753c9, #6e7ff3);
-  position: fixed;
-  z-index: 3000;
+  background-image: linear-gradient(to left, #5753c9, #6e7ff3);
 }
 
+header .titre {
+  background-color: #3d4e81;
+}
+
+
 header .container-fluid {
-  padding: 10px;
+  padding: 5px 10px 0 10px;
+  ;
 }
 
 header .container-fluid .row .col-md-12 {
@@ -73,7 +76,11 @@ header .container-fluid .row .col-md-12 {
 }
 
 header img {
-  width: 40px;
+  width: 150px;
+}
+
+.connexion-deco {
+  margin: 5px 5px 0 0;
 }
 
 .connexion-deco li {
@@ -84,6 +91,12 @@ header img {
   font-size: 10px;
   font-family: helvetica, arial, sans-serif;
   color: white;
+  text-align: center;
+  padding: 2px;
+  display: block;
+  background-color: #3d4e81;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 .connexion-deco p {
@@ -419,7 +432,7 @@ footer ul li a {
 
 
 footer img {
-  width: 70px;
+  width: 150px;
   margin-left: 10px;
 }
 
@@ -467,6 +480,35 @@ footer p {
 
 .reseaux-sociaux a:hover {
   color: #6e7ff3;
+}
+
+.dernier-film h2 {
+  text-align: left;
+  font-size: 36px;
+}
+
+.dernier-film a,
+.picto-categories a {
+  display: block;
+  margin: auto;
+  background-color: #4eb7ad;
+  color: black;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.dernier-film-img img {
+  transition: 250ms linear all;
+}
+
+.dernier-film-img img:hover {
+  box-shadow: 0 0 100px 0 white;
+  transform: scale(1.02);
+}
+
+.dernier-film p {
+  text-align: left;
+  margin: 20px;
 }
 
 /* fin footer */
