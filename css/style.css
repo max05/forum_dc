@@ -598,12 +598,89 @@ footer p {
   background-color: inherit;
 }
 
-#sectionp-thread {
+#sectionp-thread,
+.sectionp-thread {
   background: linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%,
     #383884 25%, #383884 50%,
     rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 75%,
     #383884 75%);
   background-size: 100px 100px;
+}
+
+#messagepage-bloc {
+  width: 90%;
+  margin: auto;
+  background-color: inherit;
+}
+
+#messagep-forum {
+  background-image: linear-gradient(to right, #5753c9, #6e7ff3);
+  margin: 10px auto;
+  border-radius: 10px;
+  text-align: left;
+}
+
+#form-reponse {
+  background-color: #333377;
+  opacity: 0.9;
+  border-radius: 10px;
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#textarea-message {
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 0;
+}
+
+.message-topic {
+  background-color: #5753c9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-message-topic {
+  background-color: #5753c9;
+  margin-bottom: 5px;
+}
+
+.btn-primary,
+.btn-secondary {
+  background-color: #4eb7ad;
+  padding: 5px 10px 5px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 250ms linear all;
+  border: none;
+  color: white;
+  font-family: "Gotham-bold", helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #383884;
+}
+
+.btn-secondary {
+  border-radius: 5px;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-style: italic;
+}
+
+.pseudo {
+  font-family: "Gotham-bold", helvetica, sans-serif;
+}
+
+.date {
+  font-style: italic;
+  font-size: 11px;
 }
 
 @media screen and (max-width: 768px) {
