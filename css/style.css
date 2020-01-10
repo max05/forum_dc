@@ -524,8 +524,14 @@ footer p {
   transition: 250ms linear all;
 }
 
+.container-thread {
+  transition: 250ms linear all;
+}
+
+
 .dernier-film-img img:hover,
-.actualites img:hover {
+.actualites img:hover,
+.container-thread:hover {
   box-shadow: 0 0 100px 0 white;
   transform: scale(1.02);
 }
@@ -555,6 +561,10 @@ footer p {
 }
 
 /* fin footer */
+
+.container-thread {
+  background-color: #5753c9;
+}
 
 @media screen and (max-width: 768px) {
   main {
