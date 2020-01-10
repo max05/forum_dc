@@ -1,14 +1,9 @@
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Formulaire de contact</title>
-	</head>
-
 <?php
+
 
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
+
 
 $email = $_POST['email'];
 $sujet = "Formulaire de contact";
@@ -32,10 +27,9 @@ $mailDestinataire="jemy59239@icloud.com";
 	            ".Stripslashes($_POST['message'])."
 	            ---------------------------------------";
 
-		mail($mailDestinataire, $sujet, $messageMail, $from);
 
+
+$mail = mail($mailDestinataire, $sujet, $messageMail);
+var_dump($mail);
 
 ?>
-
-
-</html>

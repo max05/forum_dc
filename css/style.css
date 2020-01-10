@@ -752,8 +752,8 @@ footer p {
   background: #333377;
 }
 
-#tinymce p {
-  display: none;
+.mce-content-body {
+  color: white !important;
 }
 
 @media screen and (max-width: 768px) {}

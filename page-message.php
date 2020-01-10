@@ -44,7 +44,7 @@ require 'bdd.php';
   if($_SESSION == true) {
       ?>
       <form id="form-reponse" method="post" action="requete-message.php">
-          <input type="textarea" name="message" placeholder="Répondre au sujet" id="textarea-message">
+          <input type="textarea" name="message" placeholder="Répondre au sujet" class="textarea-message">
           <input type="hidden" value="<?= $idTop ?>" name="topic_id">
       <button type="submit" size="30px" class="btn btn-primary">Poster</button>
       </form>
@@ -68,7 +68,7 @@ require 'bdd.php';
            echo '<p class="date"> Publié le '.$result['date'].' </p>';
            echo '</div>';
            echo '<div class="info-message-topic">';
-           echo '<p> '. $result['messages'].' </p>';
+           echo $result['messages'];
            echo '</div>';
 
        }
@@ -78,7 +78,7 @@ require 'bdd.php';
            ?>
             <form id="form-reponse" method="post" action="requete-message.php">
 
-                <input type="textarea" name="message" placeholder="Répondre au sujet" id="textarea-message">
+                <input type="textarea" name="message" placeholder="Répondre au sujet" class="textarea-message">
                 <input type="hidden" value="<?= $idTop ?>" name="topic_id">
             <button type="submit" size="30px" class="btn btn-primary">Poster</button>
             </form>
@@ -103,7 +103,8 @@ require 'bdd.php';
 
     <script>
       tinymce.init({
-        selector: '#textarea-message'
+        selector: '.textarea-message',
+        content_css : 'css/color.css'
       });
     </script>
 
