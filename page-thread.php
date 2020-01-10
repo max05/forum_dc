@@ -25,39 +25,64 @@ require 'bdd.php';
 </head>
 
 <body>
+  <section id="sectionp-thread">
+
   <section id="sectionp-forum">
-    <h1> <?php echo $result['titre'] ?> </h1>
+    <h2> <?php $query = $pda->prepare("SELECT `title` FROM `categories` WHERE `id_categories` = :idCat");
+    $query->bindValue('idCat', $idCat);
+    $query->execute(); ?> </h2>
+    <p>Afficher le nom de la catégorie</p>
   </section>
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-1">
 
       </div>
-      <div class="col-md-7 container-thread">
-        <?php
-           $query = $pda->prepare("SELECT * FROM `topics` WHERE `id_categories` = :idCat");
-           $query->bindValue('idCat', $idCat);
-           $query->execute();
-           while($result = $query->fetch()){
-             echo '<a href="page-message.php?id='.$result['id'].'">';
-             echo '<div class="sujet">';
-             echo '<h2> '.$result['title'].' </h2>';
-             echo '</div>';
-             echo '</a>';
-           }
-           $query->closeCursor();
+      <div class="col-md-7">
+        <div class="base-thread">
+          <h5>Sujets</h5>
+        </div>
 
-        ?>
+        <div class="container-thread">
+          <div class="row">
+            <div class="col-md-5">
+              <?php
+                 $query = $pda->prepare("SELECT * FROM `topics` WHERE `id_categories` = :idCat");
+                 $query->bindValue('idCat', $idCat);
+                 $query->execute();
+                 while($result = $query->fetch()){
+                   echo '<a href="page-message.php?id='.$result['id'].'">';
+                   echo '<div class="sujet">';
+                   echo '<h5> '.$result['title'].' </h5>';
+                   echo '</div>';
+                   echo '</a>';
+                 }
+                 $query->closeCursor();
+
+              ?>
+            </div>
+            <div class="col-md-5">
+<p>Crée par l'utilisateur X</p>
+            </div>
+
+            <div class="col-md-1">
+<p>Date</p>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
-      <div class="col-md-4">
-
+      <div class="col-md-3 tools-thread">
+<p>mettre les outils pour créer un sujet ici</p>
       </div>
 
     </div>
 
   </div>
-
+</section>
 
 
   <?php

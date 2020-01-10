@@ -62,6 +62,7 @@ section {
   width: 100%;
   text-align: center;
   background-color: #383884;
+  padding: 20px 0 20px 0;
 }
 
 span {
@@ -525,15 +526,28 @@ footer p {
 }
 
 .container-thread {
+  vertical-align: middle;
   transition: 250ms linear all;
+  padding: 5px;
+}
+
+.container-thread p {
+  padding: 0;
+}
+
+.container-thread .col-md-5 {
+  border-right: 1px solid rgba(255, 255, 255, 0.36);
 }
 
 
 .dernier-film-img img:hover,
-.actualites img:hover,
-.container-thread:hover {
-  box-shadow: 0 0 100px 0 white;
+.actualites img:hover {
+  box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.36);
   transform: scale(1.02);
+}
+
+.container-thread:hover {
+  background-color: #6e7ff3;
 }
 
 .dernier-film p {
@@ -564,6 +578,33 @@ footer p {
 
 .container-thread {
   background-color: #5753c9;
+}
+
+.base-thread {
+  background-color: #4eb7ad;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.tools-thread {
+  background-color: #6e7ff3;
+  border-radius: 10px;
+  height: 200px;
+}
+
+#sectionp-forum {
+  background-color: inherit;
+}
+
+#sectionp-thread {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%,
+    #383884 25%, #383884 50%,
+    rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 75%,
+    #383884 75%);
+  background-size: 100px 100px;
 }
 
 @media screen and (max-width: 768px) {
