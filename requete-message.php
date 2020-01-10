@@ -10,6 +10,7 @@ require 'bdd.php';
                 var_dump($_POST);
                 var_dump($query->execute());
                 echo "Message envoyé";
+                header("Location: page-message.php?id='".$_POST['topic_id']."'");
             } catch (\Throwable $th) {
                 echo "Erreur dans l'envoie du message";
             }
