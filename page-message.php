@@ -24,7 +24,14 @@ require 'bdd.php';
 
 <body>
   <section id="sectionp-forum">
-    <h1>page forum</h1>
+    <?php
+      $queryTitle = $pda->prepare("SELECT `title` FROM `topics` WHERE `id` = :idTop");
+      $queryTitle->bindValue('idTop' , $idTop);
+      $queryTitle->execute();
+      while ($title = $queryTitle->fetch(PDO::FETCH_NAMED)) {
+        echo '<h1>'.$title['title'].'</h1>';
+      }
+    ?>
   </section>
     <?php
        $query = $pda->prepare("SELECT * FROM `comments` c LEFT JOIN `users` u ON c.`id_users` = u.`id` WHERE c.`id_topics` = :idTop ORDER BY `date` ASC");
