@@ -30,7 +30,6 @@ if ($_GET['id'] != 0) {
       <h2> <?php $query = $pda->prepare("SELECT `title` FROM `categories` WHERE `id_categories` = :idCat");
             $query->bindValue('idCat', $idCat);
             $query->execute(); ?> </h2>
-      <p>Afficher le nom de la catégorie</p>
     </section>
 
     <div class="container-fluid">
@@ -45,32 +44,33 @@ if ($_GET['id'] != 0) {
 
           <div class="container-thread">
             <div class="row">
-              <div class="col-md-5">
+              
                 <?php
                 $query = $pda->prepare("SELECT * FROM `topics` WHERE `id_categories` = :idCat");
                 $query->bindValue('idCat', $idCat);
                 $query->execute();
                 while ($result = $query->fetch()) {
+                  echo '<div class="col-md-5">';
                   echo '<a href="page-message.php?id=' . $result['id'] . '">';
                   echo '<div class="sujet">';
                   echo '<h5> ' . $result['title'] . ' </h5>';
                   echo '</div>';
                   echo '</a>';
+                  echo '</div>';
                 }
                 $query->closeCursor();
 
+
                 ?>
-              </div>
+              
               <div class="col-md-5">
                 <p>Crée par l'utilisateur X</p>
               </div>
 
-              <div class="col-md-1">
+              <!--<div class="col-md-1">
                 <p>Date</p>
-              </div>
-
+              </div>-->
             </div>
-
           </div>
 
         </div>

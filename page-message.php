@@ -58,7 +58,7 @@ require 'bdd.php';
 
 
     <?php
-       $query = $pda->prepare("SELECT * FROM `comments` c LEFT JOIN `users` u ON c.`id_users` = u.`id` WHERE c.`id_topics` = :idTop ORDER BY `date` DESC");
+       $query = $pda->prepare("SELECT * FROM `comments` c LEFT JOIN `users` u ON c.`id_users` = u.`id` WHERE c.`id_topics` = :idTop ORDER BY `date` ");
        $query->bindValue('idTop', $idTop);
        $query->execute();
        while($result = $query->fetch(PDO::FETCH_NAMED)){
