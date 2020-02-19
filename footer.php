@@ -26,7 +26,6 @@
   <li> <a href="page-actualites.php">Actualités</a> </li>
   <li> <a href="page-univers.php">Univers</a> </li>
   <li> <a href="page-forum.php">Forum</a> </li>
-  <li> <a href="page-connexion.php">Se connecter</a> </li>
 </ul>
     </div>
 

@@ -20,8 +20,11 @@ require 'bdd.php';
 <head>
   <meta charset="utf-8">
   <title>Forum</title>
-  <link rel="stylesheet" href="font/styleheet.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<link rel="stylesheet" href="font/styleheet.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>

@@ -23,13 +23,14 @@ $mailDestinataire="jemy59239@icloud.com";
 	            Email :   ".$email."
 				      Objet :   ".$objet."
 
-	            ----------- Commentaires -----------
-	            ".Stripslashes($_POST['message'])."
-	            ---------------------------------------";
+
+".Stripslashes($_POST['message']).";
 
 
 
 $mail = mail($mailDestinataire, $sujet, $messageMail);
 var_dump($mail);
+
+header('Location: accueil.php');
 
 ?>

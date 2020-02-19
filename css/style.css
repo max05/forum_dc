@@ -106,18 +106,24 @@ header img {
 
 .connexion-deco li {
   list-style: none;
+  transition: 250ms linear all;
 }
 
 .connexion-deco li a {
   font-size: 10px;
   font-family: helvetica, arial, sans-serif;
   color: white;
+  font-weight: bold;
   text-align: center;
-  padding: 2px;
+  padding: 8px 5px;
   display: block;
-  background-color: #3d4e81;
+  background-color: #4eb7ad;
   border-radius: 5px;
   margin-top: 5px;
+}
+
+.connexion-deco li:hover {
+  box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.36);
 }
 
 .connexion-deco p {
@@ -141,21 +147,22 @@ nav ul {
 
 nav ul li {
   list-style: none;
-  width: 8%;
+  width: 13%;
   transition: 250ms linear all;
 }
 
 nav ul li:hover {
   list-style: none;
-  width: 8%;
+  width: 13%;
   background-color: #6e7ff3;
 }
 
 nav ul li a {
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Gotham", arial, sans-serif;
   color: white;
   text-align: center;
+  padding: 10px 5px;
 }
 
 nav ul li ul {
@@ -189,7 +196,7 @@ nav ul li ul {
 }
 
 #accueil {
-  background-image: url('../images/background-accueil.jpg');
+  background-image: url('../images/slider1.jpg');
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -197,6 +204,12 @@ nav ul li ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#presentation .container,
+#presentation-categories .container {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .picto-categories {
@@ -208,18 +221,18 @@ nav ul li ul {
 }
 
 .picto-categories img {
-  width: 120px;
+  width: 220px;
 }
 
 .picto-categories a {
-  font-size: 25px;
   color: white;
   text-decoration: none;
   font-family: "gotham-bold", helvetica, sans-serif;
+  background-color: none;
 }
 
 #presentation img {
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
 
@@ -230,7 +243,7 @@ nav ul li ul {
   border-radius: 20px;
   margin: auto;
   background-image: linear-gradient(to top, #4eb7ad, #5753c9, #6e7ff3);
-  opacity: 0.95;
+  opacity: 0.99;
 }
 
 #formulaire-connexion,
@@ -246,10 +259,11 @@ nav ul li ul {
 }
 
 #sectiondiv-forum {
-  width: 60%;
   margin: auto;
-  justify-content: space-between;
-  flex-wrap: wrap;
+}
+
+.img-inscription {
+  width: 40%;
 }
 
 .deuxblocs {
@@ -515,9 +529,6 @@ footer p {
 .picto-categories a {
   display: block;
   margin: auto;
-  background-color: #4eb7ad;
-  color: black;
-  width: 50%;
   border-radius: 10px;
 }
 
@@ -592,6 +603,10 @@ footer p {
 .tools-thread {
   background-color: #6e7ff3;
   border-radius: 10px;
+}
+
+.tools-thread p {
+  text-align: center;
 }
 
 #sectionp-forum {
@@ -756,9 +771,116 @@ footer p {
   color: white !important;
 }
 
-@media screen and (max-width: 768px) {}
+.liens-accueil {
+  background-color: #4eb7ad;
+  color: white;
+  width: 300px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 250ms linear all;
+  margin: auto;
+  border-radius: 10px;
+}
 
-@media screen and (max-width: 480px) {
-  .deuxblocs input {
-    width: 100%;
+.categories-icon {
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 10px;
+  transition: 250ms linear all;
+}
+
+.liens-accueil:hover,
+.categories-icon:hover {
+  box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.36);
+  transform: scale(1.02);
+}
+
+.categories-icon:hover {
+  background-color: #5753C9;
+  border: none;
+
+}
+
+@media screen and (max-width: 768px) {
+
+  h2 {
+    font-size: 25px;
+    width: 90%;
   }
+
+  p,
+  .dernier-film p {
+    text-align: justify;
+    padding: 12px;
+  }
+
+  h4 {
+    height: 80px;
+    font-size: 18px;
+  }
+
+  .col-md-3 {
+    padding: 8px;
+  }
+
+  nav ul li {
+    width: 15%;
+  }
+
+  @media screen and (max-width: 480px) {
+    nav ul {
+      display: block;
+    }
+
+    nav ul li {
+      width: 100%;
+      border-bottom: 1px solid #4eb7ad;
+    }
+
+    #accueil {
+      height: 40vh;
+    }
+
+    .picto-categories a {
+      font-size: 15px;
+    }
+
+    .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    #separateur {
+      margin: 10px 0;
+    }
+
+    .dernier-film h2 {
+      font-size: 25px;
+      margin: 10px;
+      width: 100%;
+      ;
+    }
+
+    .dernier-film p {
+      margin: 0;
+    }
+
+    section {
+      padding: 0;
+    }
+
+    #actualites .container .row .col-md-3 {
+      padding: 2px;
+    }
+
+    .actualites h4 {
+      height: auto;
+    }
+
+    .deuxblocs input {
+      width: 100%;
+    }
+
+
+    footer {
+      padding: 5px;
+    }

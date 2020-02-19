@@ -8,6 +8,12 @@ include 'nav.php';
     <meta charset="utf-8">
     <title>DC Comics - Connexion</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="font/styleheet.css">
+  <link rel="stylesheet" href="css/style.css">
+
 
   </head>
   <body>
@@ -20,7 +26,7 @@ include 'nav.php';
       <form class="formulaire" method="post" action="connexion.php" autocomplete="off" autocomplete="false">
             <h2>Connexion</h2>
             <label for="pseudo"> <!--Identifiant--> </label> <br><input type="text" size="24" name="mail" id="mail" placeholder="Email">
-            
+
                <br/>
                  <label for="password"> <!--Password--> </label>  <br> <input type="password" placeholder="Mot de passe" name="password" id="password" autocomplete="off"/>
                  <br>
