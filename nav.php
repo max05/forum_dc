@@ -7,11 +7,12 @@ require 'bdd.php'
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>nav</title>
+    <title>Forum DC - Le forum des passionnés</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="css" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="font/styleheet.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="css" href="css/style.css">
 
   </head>
   <body>
@@ -46,8 +47,8 @@ require 'bdd.php'
 <nav>
 <ul>
   <li> <a href="accueil.php">Accueil</a> </li>
-  <li> <a href="heros.php">Actualités</a>
-  <li> <a href="heros.php">Univers</a>
+  <li> <a href="#">Actualités</a>
+  <li> <a href="#">Univers</a>
   <ul>
     <li> <a href="#">Héros</a> </li>
     <li> <a href="#">Méchant</a> </li>

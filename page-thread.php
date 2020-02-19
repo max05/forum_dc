@@ -6,8 +6,6 @@ require 'bdd.php';
 if ($_GET['id'] != 0) {
   $idCat = $_GET['id'];
 } else {
-  echo "Erreur";
-  header("Location: accueil.php");
 }
 
 ?>
@@ -19,8 +17,11 @@ if ($_GET['id'] != 0) {
 <head>
   <meta charset="utf-8">
   <title>Page sujet</title>
-  <link rel="stylesheet" href="font/styleheet.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<link rel="stylesheet" href="font/styleheet.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@ if ($_GET['id'] != 0) {
       <h2> <?php $query = $pda->prepare("SELECT `title` FROM `categories` WHERE `id_categories` = :idCat");
             $query->bindValue('idCat', $idCat);
             $query->execute(); ?> </h2>
-      <p>Afficher le nom de la catégorie</p>
+      <h4>Afficher le nom de la catégorie</h4>
     </section>
 
     <div class="container-fluid">
@@ -62,11 +63,25 @@ if ($_GET['id'] != 0) {
                 ?>
               </div>
               <div class="col-md-5">
-                <p>Crée par l'utilisateur X</p>
+                <?php
+                echo '<a href="page-message.php?id=' . $result['id'] . '">';
+                echo '<div>';
+                echo '<p>' . "Crée par " . '<strong>' . $_SESSION['pseudo'] . '</strong>' . '</p>';
+                echo '</div>';
+                echo '</a>';
+
+                ?>
               </div>
 
               <div class="col-md-1">
-                <p>Date</p>
+                <?php
+                echo '<a href="page-message.php?id=' . $result['id'] . '">';
+                echo '<div>';
+                echo '<p>' . "Crée par " . '<strong>' .$result['date'] . '</strong>' . '</p>';
+                echo '</div>';
+                echo '</a>';
+
+                ?>
               </div>
 
             </div>
@@ -84,9 +99,9 @@ if ($_GET['id'] != 0) {
             </form>
 
          <?php } else { ?>
-          <label for="connexion">Vous devez être connecté pour poster</label>
+          <p for="connexion">Vous devez être connecter pour poster</p>
           <a href="page-connexion.php"><button class="btn-primary">Connexion</button></a>
-          
+
 
           <?php } ?>
         </div>

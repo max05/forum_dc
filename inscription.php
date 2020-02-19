@@ -19,9 +19,9 @@ include 'nav.php';
 <section id="bloc-formulaire">
 
 <section id="formulaire">
-    <div class="img-inscription">
+    <div>
       <form class="inscription" action="requete_inscription.php" method="post" autocomplete="off">
-<img class="img-inscription" src="images/logo.png" alt="logo-dc">
+<img class="img-inscription" src="images/logo.svg" alt="logo-dc">
 <h1>Inscription</h1>
 
 
