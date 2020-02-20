@@ -7,7 +7,6 @@ if ($_GET['id'] != 0) {
   $idCat = $_GET['id'];
 } else {
 }
-
 ?>
 
 
@@ -31,14 +30,32 @@ if ($_GET['id'] != 0) {
       <h2> <?php $query = $pda->prepare("SELECT `title` FROM `categories` WHERE `id_categories` = :idCat");
             $query->bindValue('idCat', $idCat);
             $query->execute(); ?> </h2>
-<<<<<<< HEAD
-=======
+
       <h4>Afficher le nom de la catégorie</h4>
->>>>>>> fb89e5a339753264c6099f23e90f60b694d9b00e
+
     </section>
 
     <div class="container-fluid">
       <div class="row">
+
+
+                        <div class="col-md-12 tools-thread mobile">
+                          <?php if($_SESSION == true) { ?>
+                            <form action="requete-topic.php" method="post" class="form-sujet">
+                              <label for="titre">Titre du sujet :</label><input type="text" id="titre_topic" name="titre_topic" placeholder="Votre titre">
+                              <label for="message">Messages :</label><textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+                              <input type="hidden" name="idCat" value="<?= $idCat ?>">
+                              <input type="submit" id="send" name="Envoyer">
+                            </form>
+
+                         <?php } else { ?>
+                          <p for="connexion">Vous devez être connecter pour poster</p>
+                          <a href="page-connexion.php"><button class="btn-primary">Connexion</button></a>
+
+
+                          <?php } ?>
+                        </div>
+
         <div class="col-md-1">
 
         </div>
@@ -49,7 +66,7 @@ if ($_GET['id'] != 0) {
 
           <div class="container-thread">
             <div class="row">
-              
+
                 <?php
                 $query = $pda->prepare("SELECT * FROM `topics` WHERE `id_categories` = :idCat");
                 $query->bindValue('idCat', $idCat);
@@ -64,10 +81,9 @@ if ($_GET['id'] != 0) {
                   echo '</div>';
                 }
                 $query->closeCursor();
-
-
                 ?>
-              
+
+
               <div class="col-md-5">
                 <?php
                 echo '<a href="page-message.php?id=' . $result['id'] . '">';
@@ -80,26 +96,26 @@ if ($_GET['id'] != 0) {
               </div>
 
 
-              <div class="col-md-1">
+              <div class="col-md-2">
                 <?php
                 echo '<a href="page-message.php?id=' . $result['id'] . '">';
                 echo '<div>';
-                echo '<p>' . "Crée par " . '<strong>' .$result['date'] . '</strong>' . '</p>';
+                echo '<p>' . "Date : " . '<strong>' .$result['date'] . '</strong>' . '</p>';
                 echo '</div>';
                 echo '</a>';
 
                 ?>
               </div>
 
->>>>>>> fb89e5a339753264c6099f23e90f60b694d9b00e
+
             </div>
           </div>
 
         </div>
-        <div class="col-md-3 tools-thread">
+        <div class="col-md-3 tools-thread desktop">
           <?php if($_SESSION == true) { ?>
             <form action="requete-topic.php" method="post" class="form-sujet">
-              <label for="titre">Titre du sujet :</label><input type="text" id="titre_topic" name="titre_topic" placeholder="Votre titre">
+              <label for="titre"> <p>Titre du sujet : </p></label><input type="text" id="titre_topic" name="titre_topic" placeholder="Votre titre">
               <label for="message">Messages :</label><textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
               <input type="hidden" name="idCat" value="<?= $idCat ?>">
               <input type="submit" id="send" name="Envoyer">
