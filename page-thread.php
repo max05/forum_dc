@@ -6,6 +6,8 @@ require 'bdd.php';
 if ($_GET['id'] != 0) {
   $idCat = $_GET['id'];
 } else {
+  echo "Erreur";
+  header("Location: accueil.php");
 }
 ?>
 
@@ -67,45 +69,43 @@ if ($_GET['id'] != 0) {
           <div class="container-thread">
             <div class="row">
 
-                <?php
-                $query = $pda->prepare("SELECT * FROM `topics` WHERE `id_categories` = :idCat");
+                <?php //faire en sorte qu'on voit le pseudo de l'utilisateur qui a créer le topic
+                $query = $pda->prepare("SELECT t.`id` AS t_id, t.`title`, t.`date` AS t_date, u.`pseudo` AS u_pseudo  FROM `topics` t LEFT JOIN `users` u ON u.id = t.id_users WHERE t.`id_categories` = :idCat ORDER BY t.`date` DESC");
                 $query->bindValue('idCat', $idCat);
                 $query->execute();
                 while ($result = $query->fetch()) {
-                  echo '<div class="col-md-5">';
-                  echo '<a href="page-message.php?id=' . $result['id'] . '">';
+                  echo '<div class="col-md-4">';
+                  echo '<a href="page-message.php?id=' . $result['t_id'] . '">';
                   echo '<div class="sujet">';
                   echo '<h5> ' . $result['title'] . ' </h5>';
                   echo '</div>';
                   echo '</a>';
                   echo '</div>';
-                }
+                  ?>
+                <div class="col-md-4">
+                <?php
+                echo '<a href="page-message.php?id=' . $result['t_id'] . '">';
+                echo '<div>';
+                echo '<p>' . "Crée par " . '<strong>' . $result['u_pseudo'] . '</strong>' . '</p>';
+                echo '</div>';
+                echo '</a>';
+
+                ?>
+              </div>
+              <div class="col-md-4">
+                <?php
+                echo '<a href="page-message.php?id=' . $result['t_id'] . '">';
+                echo '<div>';
+                echo '<p>' . "Date : " . '<strong>' .$result['t_date'] . '</strong>' . '</p>';
+                echo '</div>';
+                echo '</a>';
+
+                ?>
+              </div>
+
+              <?php  }
                 $query->closeCursor();
                 ?>
-
-
-              <div class="col-md-5">
-                <?php
-                echo '<a href="page-message.php?id=' . $result['id'] . '">';
-                echo '<div>';
-                echo '<p>' . "Crée par " . '<strong>' . $_SESSION['pseudo'] . '</strong>' . '</p>';
-                echo '</div>';
-                echo '</a>';
-
-                ?>
-              </div>
-
-
-              <div class="col-md-2">
-                <?php
-                echo '<a href="page-message.php?id=' . $result['id'] . '">';
-                echo '<div>';
-                echo '<p>' . "Date : " . '<strong>' .$result['date'] . '</strong>' . '</p>';
-                echo '</div>';
-                echo '</a>';
-
-                ?>
-              </div>
             </div>
           </div>
 

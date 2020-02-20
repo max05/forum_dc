@@ -7,8 +7,8 @@ $query->bindValue("titre", $_POST['titre_topic']);
 $query->bindValue("idCat", $_POST['idCat']);
 $query->bindValue("idUser", $_SESSION['user']['id']);
 try {
-    var_dump($query->execute());
-    //header("Location: page-message.php?id=" . $_POST['idCat']);
+    $query->execute();
+    header("Location: page-thread.php?id=" . $_POST['idCat']);
 } catch (\Throwable $th) {
     echo "Erreur dans l'envoie du message";
 }
