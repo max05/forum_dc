@@ -31,10 +31,9 @@ if ($_GET['id'] != 0) {
       <h2> <?php $query = $pda->prepare("SELECT `title` FROM `categories` WHERE `id_categories` = :idCat");
             $query->bindValue('idCat', $idCat);
             $query->execute(); ?> </h2>
-<<<<<<< HEAD
-=======
+
       <h4>Afficher le nom de la catégorie</h4>
->>>>>>> fb89e5a339753264c6099f23e90f60b694d9b00e
+
     </section>
 
     <div class="container-fluid">
@@ -90,8 +89,6 @@ if ($_GET['id'] != 0) {
 
                 ?>
               </div>
-
->>>>>>> fb89e5a339753264c6099f23e90f60b694d9b00e
             </div>
           </div>
 
