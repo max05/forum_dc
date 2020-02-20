@@ -15,13 +15,13 @@ $mailDestinataire="jemy59239@icloud.com";
 		$from .= " 1.0\nContent-Type: text/html; charset=UTF-8\n";
 		$header = $sujet;
 
-		$messageMail = "
-	            Formulaire de contact:
+$messageMail = "
+Formulaire de contact:
 
-	            Nom :   ".$nom."
-	            Prénom :   ".ucfirst($prenom)."
-	            Email :   ".$email."
-				      Objet :   ".$objet."
+Nom :   ".$nom."
+Prénom :   ".ucfirst($prenom)."
+Email :   ".$email."
+Objet :   ".$objet."
 
 
 ".Stripslashes($_POST['message']).";
